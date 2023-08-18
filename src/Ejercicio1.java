@@ -5,21 +5,19 @@ public class Ejercicio1 {
         Scanner scanner = new Scanner(System.in);
         final int password = 1202;
         int userPass; 
-        String user;
-
-        System.out.println("Ingrese su usuario");
-        user = scanner.nextLine();
+        final String user = "miguel"; 
+        String userIn;
                 
         do{
+        
+        System.out.println("Ingrese su usuario");
+        userIn = scanner.nextLine();
            
-
-        System.out.println("Ingrese su contraseña");
+        System.out.println("Ingrese su contraseña numerica");
         userPass = scanner.nextInt();
-            if(password!=userPass){
-                System.out.println("Contraseña Incorrecta");
 
-            }
-        }while(password!=userPass);
+
+        }while((user.equals(userIn) == false) && password!=userPass);   
 
         System.out.println("Ingreso Exitoso");
 
